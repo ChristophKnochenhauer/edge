@@ -2,6 +2,17 @@
 
 This is a general purpose repository in which I test out different ideas which are meant to eventually lead to a new kind of learning tool.
 Roughly, I want a tool in which knowledge is organized as a graph.
+A full description will follow eventually.
+
+## Current Stage
+
+At this point, we only have a barebones frontend set up.
+To run it, navifate to the `frontend` folder and run the following commands:
+```
+pnpm install
+pnpm dev
+```
+Then open a browser and point it to `http://localhost:3000/` or simply click [here](http://localhost:3000/).
 
 ## Milestone 1
 
@@ -11,9 +22,9 @@ I have played around with next.js before, but can barely write proper Javascript
 Hence we have some studying to do!
 
 Here is the plan:
-- [ ] Setup a simple next.js project under learning/milestone_01
-- [ ] Work through the next.js documentation to learn how it works
-- [ ] Create a simple static page in next.js
+- [x] Setup a simple next.js project under frontend.
+- [ ] Work through the next.js documentation to learn how it works.
+- [ ] Create a simple static page in next.js.
 - [ ] Gather contents for a simple knowledge graph.
 I would like to do this in the context of "AI Literacy".
 - [ ] Build a simple knowledge graph from the contents.
