@@ -14,7 +14,7 @@ pnpm dev
 ```
 Then open a browser and point it to `http://localhost:3000/` or simply click [here](http://localhost:3000/).
 
-## Milestone 1
+## Milestone 1: get some basic frontend running
 
 The first milestone is to learn how to visualize a simple knowledge graph.
 I would like to use next.js with an appropriate plugin (React Flow?) for this.
@@ -24,6 +24,9 @@ Hence we have some studying to do!
 Here is the plan:
 - [x] Setup a simple next.js project under frontend.
 - [ ] Work through the next.js documentation to learn how it works.
+Work through the tutorial [here](https://nextjs.org/learn/dashboard-app).
+The tutorial project is placed under learning/nextjs.
+We are currently in Chapter 4 out of 15 of the tutorial; click [here](https://nextjs.org/learn/dashboard-app/creating-layouts-and-pages).
 - [ ] Create a simple static page in next.js.
 - [ ] Gather contents for a simple knowledge graph.
 I would like to do this in the context of "AI Literacy".
