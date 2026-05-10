@@ -14,8 +14,16 @@ const connectionPool = require('./db');
 
 export async function fetchRevenue() {
   try {
+    // Artificially delay a response for demo purposes.
+    // Don't do this in production :)
+
+    console.log('Fetching revenue data...');
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+
     const data = await connectionPool.query(`SELECT * FROM revenue`);
     const revenue = data.rows.map((rev: Revenue) => rev)
+
+    console.log('Data fetch completed after 3 seconds.');
 
     return revenue;
   } catch (error) {
