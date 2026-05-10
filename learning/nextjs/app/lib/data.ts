@@ -112,7 +112,7 @@ export async function fetchFilteredInvoices(
     //  ORDER BY invoices.date DESC
     //  LIMIT ${ITEMS_PER_PAGE} OFFSET ${offset}
     //`;
-    const invoices = await connectionPool.query(`
+    const sql_query = `
       SELECT
         invoices.id,
         invoices.amount,
@@ -124,16 +124,16 @@ export async function fetchFilteredInvoices(
       FROM invoices
       JOIN customers ON invoices.customer_id = customers.id
       WHERE
-        customers.name ILIKE ${`%${query}%`} OR
-        customers.email ILIKE ${`%${query}%`} OR
-        invoices.amount::text ILIKE ${`%${query}%`} OR
-        invoices.date::text ILIKE ${`%${query}%`} OR
-        invoices.status ILIKE ${`%${query}%`}
+        customers.name ILIKE '${`%${query}%`}' OR
+        customers.email ILIKE '${`%${query}%`}' OR
+        invoices.amount::text ILIKE '${`%${query}%`}' OR
+        invoices.date::text ILIKE '${`%${query}%`}' OR
+        invoices.status ILIKE '${`%${query}%`}'
       ORDER BY invoices.date DESC
       LIMIT ${ITEMS_PER_PAGE} OFFSET ${offset}
-    `);
-
-    return invoices;
+    `
+    const invoices = await connectionPool.query(sql_query)
+    return invoices.rows;
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch invoices.');
@@ -156,14 +156,14 @@ export async function fetchInvoicesPages(query: string) {
       FROM invoices
       JOIN customers ON invoices.customer_id = customers.id
       WHERE
-        customers.name ILIKE ${`%${query}%`} OR
-        customers.email ILIKE ${`%${query}%`} OR
-        invoices.amount::text ILIKE ${`%${query}%`} OR
-        invoices.date::text ILIKE ${`%${query}%`} OR
-        invoices.status ILIKE ${`%${query}%`}
+        customers.name ILIKE '${`%${query}%`}' OR
+        customers.email ILIKE '${`%${query}%`}' OR
+        invoices.amount::text ILIKE '${`%${query}%`}' OR
+        invoices.date::text ILIKE '${`%${query}%`}' OR
+        invoices.status ILIKE '${`%${query}%`}'
     `);
     
-    const totalPages = Math.ceil(Number(data[0].count) / ITEMS_PER_PAGE);
+    const totalPages = Math.ceil(Number(data.rows[0].count) / ITEMS_PER_PAGE);
     return totalPages;
   } catch (error) {
     console.error('Database Error:', error);
