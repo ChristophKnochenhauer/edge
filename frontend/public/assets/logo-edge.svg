@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .node {
+        fill: #9abce4;
+      }
+
+      .node-boundary {
+        stroke: #5e94d4;
+        stroke-width: 4;
+      }
+
+      .edge {
+        stroke: #9abce4;
+        stroke-width: 4;
+        stroke-linecap: round;
+        opacity: 0.9;
+      }
+    </style>
+  </defs>
+
+  <!-- Graph-based E symbol -->
+  <g transform="translate(38 32)">
+
+    <!-- Top vertical spine -->
+    <line class="edge" x1="10" y1="19" x2="10" y2="29" />
+
+    <!-- Top vertical spine -->
+    <line class="edge" x1="10" y1="47" x2="10" y2="57" />
+
+    <!-- Top branch -->
+    <line class="edge" x1="19" y1="10" x2="43" y2="10" />
+
+    <!-- Middle branch -->
+    <line class="edge" x1="19" y1="38" x2="33" y2="38" />
+
+    <!-- Bottom branch -->
+    <line class="edge" x1="19" y1="66" x2="43" y2="66" />
+
+    <!-- Nodes -->
+    <circle class="node" cx="10" cy="10" r="4" />
+    <circle class="node" cx="52" cy="10" r="4" />
+
+    <circle class="node" cx="10" cy="38" r="4" />
+    <circle class="node" cx="42" cy="38" r="4" />
+
+    <circle class="node" cx="10" cy="66" r="4" />
+    <circle class="node" cx="52" cy="66" r="4" />
+
+    <!-- Bounding Circle -->
+    <circle class="node-boundary" cx="30" cy="37" r="50" />
+  </g>
+</svg>
