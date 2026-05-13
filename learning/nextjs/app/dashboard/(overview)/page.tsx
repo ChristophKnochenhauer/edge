@@ -8,7 +8,6 @@ import {
   LatestInvoicesSkeleton,
   RevenueChartSkeleton,
 } from '@/app/ui/skeletons';
- 
 export default async function Page() {
   return (
     <main>
