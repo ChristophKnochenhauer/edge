@@ -26,7 +26,7 @@ Here is the plan:
 - [ ] Work through the next.js documentation to learn how it works.
 Work through the tutorial [here](https://nextjs.org/learn/dashboard-app).
 The tutorial project is placed under learning/nextjs.
-We are currently in Chapter 14 out of 15 of the tutorial; click [here](https://nextjs.org/learn/dashboard-app/adding-authentication).
+We are currently in Chapter 15 out of 15 of the tutorial; click [here](https://nextjs.org/learn/dashboard-app/adding-metadata).
 - [ ] Create a simple static page in next.js.
 - [ ] Gather contents for a simple knowledge graph.
 I would like to do this in the context of "AI Literacy".
